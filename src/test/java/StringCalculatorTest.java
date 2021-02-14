@@ -35,4 +35,10 @@ class StringCalculatorTest {
         Assertions.assertEquals(10, calculator.add(input2));
         Assertions.assertEquals(15, calculator.add(input3));
     }
+
+    @Test
+    void addMultipleNumbersWithNewLine() {
+        String input0 = "1\n2,3";
+        Assertions.assertEquals(3, calculator.add(input0));
+    }
 }
