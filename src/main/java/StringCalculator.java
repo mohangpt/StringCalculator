@@ -7,7 +7,9 @@ public class StringCalculator {
             if (i < 0) {
                 throw new IllegalArgumentException("negatives are not allowed");
             }
-            sum = sum + i;
+            if(i < 1000) {
+                sum = sum + i;
+            }
         }
         return sum;
     }
