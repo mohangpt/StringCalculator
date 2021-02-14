@@ -58,4 +58,10 @@ class StringCalculatorTest {
             Assertions.assertEquals("negatives are not allowed", e.getMessage());
         }
     }
+
+    @Test
+    void addWithAvoidingNumbersMoreThan1000() {
+        String input = "1,1001";
+        Assertions.assertEquals(1, calculator.add(input));
+    }
 }
