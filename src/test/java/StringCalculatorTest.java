@@ -39,6 +39,6 @@ class StringCalculatorTest {
     @Test
     void addMultipleNumbersWithNewLine() {
         String input0 = "1\n2,3";
-        Assertions.assertEquals(3, calculator.add(input0));
+        Assertions.assertEquals(6, calculator.add(input0));
     }
 }

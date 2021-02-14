@@ -10,6 +10,7 @@ public class StringCalculator {
     }
 
     private int[] generateNumbersFromString(String input) {
+        input = input.replace("\n",",");
 
         String[] stringsArray=  input.split(",");
 
