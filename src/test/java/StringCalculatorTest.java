@@ -12,4 +12,9 @@ class StringCalculatorTest {
         Assertions.assertEquals(0, calculator.add(input));
     }
 
+    @org.junit.jupiter.api.Test
+    void addTwoPositiveNumbers() {
+        String input = "0,1";
+        Assertions.assertEquals(1, calculator.add(input));
+    }
 }
