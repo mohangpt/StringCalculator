@@ -64,4 +64,10 @@ class StringCalculatorTest {
         String input = "1,1001";
         Assertions.assertEquals(1, calculator.add(input));
     }
+
+    @Test
+    void addWithUsingCustomDelimiterWithAnyLength() {
+        String input = "//[***]\n1***2***3";
+        Assertions.assertEquals(6, calculator.add(input));
+    }
 }
