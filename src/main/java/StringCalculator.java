@@ -1,9 +1,12 @@
 public class StringCalculator {
-    public int add (String s) {
+    public int add (String s) throws IllegalArgumentException {
         if (s == "" || s.isEmpty()) return 0;
         int[] input = generateNumbersFromString(s , extractDelimiter(s));
         int sum = 0;
         for (int i : input) {
+            if (i < 0) {
+                throw new IllegalArgumentException("negatives are not allowed");
+            }
             sum = sum + i;
         }
         return sum;

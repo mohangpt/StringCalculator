@@ -47,4 +47,15 @@ class StringCalculatorTest {
         String input = "//;\n1;2";
         Assertions.assertEquals(3, calculator.add(input));
     }
+
+    @Test
+    void addNegativeNumbers() {
+        String input = "-1,0";
+        try {
+            calculator.add(input);
+            fail("It did not failed at negative numbers!");
+        }catch (Exception e){
+            Assertions.assertEquals("negatives are not allowed", e.getMessage());
+        }
+    }
 }
