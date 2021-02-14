@@ -2,7 +2,11 @@ public class StringCalculator {
     public int add (String s) {
         if (s == "" || s.isEmpty()) return 0;
         int[] input = generateNumbersFromString(s);
-        return input[0]+input[1];
+        int sum = 0;
+        for (int i : input) {
+            sum = sum + i;
+        }
+        return sum;
     }
 
     private int[] generateNumbersFromString(String input) {
