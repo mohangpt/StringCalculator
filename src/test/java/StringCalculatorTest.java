@@ -41,4 +41,10 @@ class StringCalculatorTest {
         String input0 = "1\n2,3";
         Assertions.assertEquals(6, calculator.add(input0));
     }
+
+    @Test
+    void addWithCustomDelimiter() {
+        String input = "//;\n1;2";
+        Assertions.assertEquals(3, calculator.add(input));
+    }
 }
