@@ -23,4 +23,16 @@ class StringCalculatorTest {
         String input = "0,1";
         Assertions.assertEquals(1, calculator.add(input));
     }
+
+    @Test
+    void addMultipleNumbers() {
+        String input0 = "0,1,2";
+        String input1 = "0,1,2,3";
+        String input2 = "0,1,2,3,4";
+        String input3 = "0,1,2,3,4,5";
+        Assertions.assertEquals(3, calculator.add(input0));
+        Assertions.assertEquals(6, calculator.add(input1));
+        Assertions.assertEquals(10, calculator.add(input2));
+        Assertions.assertEquals(15, calculator.add(input3));
+    }
 }
