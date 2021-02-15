@@ -77,8 +77,9 @@ class StringCalculatorTest {
         Assertions.assertEquals(6, calculator.add(input));
     }
 
+    @Test
     void addWithMultipleDelimiterWithMultipleLength() {
-        String input = "//[*#][%#]\n1*#2%#3";
+        String input = "//[*#&][%#]\n1*#&2%#3";
         Assertions.assertEquals(6, calculator.add(input));
     }
 }
